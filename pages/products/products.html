@@ -1,0 +1,45 @@
+<div class="template">
+    <h3>On this page you can manage products</h3>
+    
+    <div class="new-product">
+        <p>Here you can add new products</p>
+        <label for="input-productname">Input name: &nbsp </label>
+        <input id="input-productname" placeholder="e.g. Apple">
+        
+        <label for="input-price">Input price in dkk: &nbsp </label>
+        <input id="input-price" placeholder="e.g. 25">
+        
+        <label for="input-weight">Input weight: &nbsp </label>
+        <input id="input-weight" placeholder="e.g. 150">
+        
+        <button id="btn-newproduct-confirm" type="button" class="btn btn-info">Add</button>
+        <p id="newproduct-status-msg"></p>
+    </div>
+
+    <div class="lookup-product">
+        <p>Here you can look up a specific product by its ID</p>
+        <label for="input-productid">Input ID: &nbsp </label>
+        <input id="input-productid" placeholder="e.g. 5">
+        <button id="btn-lookupproduct-confirm" type="button" class="btn btn-info">Lookup</button>
+
+        <br>
+        <div class="product-properties" id="product-properties"></div>
+        <p id="lookupproduct-status-msg"></p>
+    </div>
+
+    <div class="all-products">
+    <p>This is a list of all the products</p>
+    <table class="table">
+        <thead>
+          <tr>
+            <td>Product Id</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Weight</td>
+          </tr>
+        </thead>
+        <tbody id="table-rows"></tbody>
+      </table>
+      <p id="error" style="margin-top:0.5 em;"></p>
+    </div>
+</div>

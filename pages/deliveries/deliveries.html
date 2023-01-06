@@ -1,0 +1,90 @@
+<div class="template">
+    <h3>On this page you can mange deliveries</h3>
+
+    <div class="new-delivery">
+        <p>Here you can add new deliveries</p>
+        <label for="input-deliverydate">Delivery date: &nbsp </label>
+        <input id="input-deliverydate" placeholder="dd-MM-yyyy">
+
+        <label for="input-fromwarehouse">Warehouse: &nbsp </label>
+        <input id="input-fromwarehouse" placeholder="Frederiksberg warehouse">
+
+        <label for="input-destination">Destination adress: &nbsp </label>
+        <input id="input-destination" placeholder="Søndre Fasanvej 14, 2000 København">
+
+        <button id="btn-newdelivery-confirm" type="button" class="btn btn-info">Create</button>
+        <p id="newdelivery-status-msg"></p>
+    </div>
+
+    <div class="addproductordertodelivery">
+        <p>Here you can add product orders to a delivery</p>
+        <label for="input-deliveryid-addpo">Delivery Id: &nbsp </label>
+        <input id="input-deliveryid-addpo" placeholder="e.g. 2">
+
+        <label for="input-productid-addpo">Product Id: &nbsp </label>
+        <input id="input-productid-addpo" placeholder="e.g. 5">
+
+        <label for="input-quantity-addpo">Quantity: &nbsp </label>
+        <input id="input-quantity-addpo" placeholder="e.g. 4">
+
+        <button id="btn-addpo-confirm" type="button" class="btn btn-info">Add Product Order</button>
+        <p id="addpo-status-msg"></p>
+        <p id="total"></p>
+    </div>
+
+    <div class="lookup-delivery">
+        <p>Here you can look up a specific delivery by its ID</p>
+        <label for="input-deliveryid">Delivery Id: &nbsp </label>
+        <input id="input-deliveryid" placeholder="e.g. 2">
+        <button id="btn-lookupdelivery-confirm" type="button" class="btn btn-info">Lookup</button>
+
+        <br>
+        <div class="delivery-properties" id="delivery-properties"></div>
+        <p id="lookupdelivery-status-msg"></p>
+    </div>
+
+    <div class="all-deliveries">
+        <p>This is a list of all deliveries</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>Delivery ID</td>
+                    <td>Delivery Date</td>
+                    <td>Warehouse</td>
+                    <td>Destination</td>
+                    <td>Total Price</td>
+                    <td>Total Weight</td>
+                    <td>Amount of product orders</td>
+                </tr>
+            </thead>
+            <tbody id="table-rows"></tbody>
+        </table>
+        <p id="error" style="margin-top:0.5 em;"></p>
+    </div>
+
+    <div class="van-assignment">
+        <p>Here you can assign deliveries to vans</p>
+        <p><i>If the total weight of the delivery is above that of the van, the delivery will not be assigned to the van.</i></p>
+        
+        <label for="input-vanid-vanassignment">Van Id: &nbsp </label>
+        <input id="input-vanid-vanassignment" placeholder="e.g. 1">
+
+        <label for="input-deliveryid-vanassignment">Delivery ID: &nbsp </label>
+        <input id="input-deliveryid-vanassignment" placeholder="e.g. 2">
+
+        <button id="btn-vanassignment-confirm" type="button" class="btn btn-info">Add to van</button>
+        <p id="vanassignment-status-msg"></p>
+    </div>
+
+    <div class="lookup-van">
+        <p>Here you can look up a specific van by its id. Its assigned deliveries, if any, will also be shown.</p>
+        <p><i>There are four vans in the database. They have id 1-4.</i></p>
+        <label for="input-vanid-lookup">Van ID: &nbsp </label>
+        <input id="input-vanid-lookup" placeholder="e.g. 1">
+        <button id="btn-lookupvan-confirm" type="button" class="btn btn-info">Lookup</button>
+
+        <br>
+        <div class="van-properties" id="van-properties"></div>
+        <p id="lookupvan-status-msg"></p>
+    </div>
+</div>
